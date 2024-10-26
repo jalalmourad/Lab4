@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AddressBooks: </title>
+</head>
+<body>
+<h1>List of AddressBooks: </h1>
+<ul>
+
+    <li th:each="addressBook : ${addressbook}" >
+        <b> AddressBook: </b> <span th:text="${addressBook.id}"></span>
+
+<ul>
+    <li th:each="buddy : ${addressBook.buddiesList}">
+        Name: <span th:text="${buddy.name}">Name</span> - Phone: <span th:text="${buddy.phoneNumber}">Phone</span>
+    </li>
+</ul>
+    </li>
+
+</ul>
+</body>
+</html>

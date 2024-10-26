@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>All Buddies</title>
+</head>
+<body>
+<h1>All Buddies</h1>
+<ul>
+    <li th:each="buddy : ${buddies}">
+       Name: <span th:text="${buddy.name}">Name</span> - Phone: <span th:text="${buddy.phoneNumber}">Phone</span>
+    </li>
+</ul>
+</body>
+</html>
